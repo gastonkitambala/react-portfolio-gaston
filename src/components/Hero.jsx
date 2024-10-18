@@ -1,5 +1,5 @@
 import { HERO_CONTENT } from "../constants";
-import profilePic from "../assets/kevinRushProfile.png";
+import profilePic from "../assets/gaston_fall.jpeg";
 import { motion } from "framer-motion";
 //import { Container } from "postcss";
 
