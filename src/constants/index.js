@@ -79,7 +79,7 @@ export const CONTACT = {
 import project1 from "../assets/projects/ANPR.jpg";
 import project2 from "../assets/projects/tic-tac-toe.png";
 import project3 from "../assets/projects/bookstore.png";
-import project4 from "../assets/projects/project-4.jpg";
+import project4 from "../assets/projects/project-4.png";
 
 export const HERO_CONTENT = `I am a dedicated software engineer with a talent for building robust and scalable applications. With over 2 years of practical experience, I have worked extensively on embedded software, desktop applications, and full-stack web development. My expertise spans front-end technologies like React.js and Vue.js, alongside back-end frameworks such as Node.js, FastAPI, and databases like MySQL, PostgreSQL, MSSQL, and MongoDB. I aim to leverage my skills to create innovative solutions that fuel business growth and deliver outstanding user experiences.`;
 
@@ -129,7 +129,8 @@ export const PROJECTS = [
   {
     title: "Tic-tac-toe Game",
     image: project2,
-    description: "Built an interactive Tic-Tac-Toe game using React.js, showcasing dynamic state management and component-based architecture. The game includes features such as real-time player moves, win condition checks, and a reset functionality. Emphasized clean, modular code and a responsive design for smooth user experience on both desktop and mobile platforms.",
+    description:
+      "Built an interactive Tic-Tac-Toe game using React.js, showcasing dynamic state management and component-based architecture. The game includes features such as real-time player moves, win condition checks, and a reset functionality. Emphasized clean, modular code and a responsive design for smooth user experience on both desktop and mobile platforms.",
     technologies: ["React.js"],
   },
   {
@@ -140,11 +141,11 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "React.js", "Node.js", "MongoDB", "Express"],
   },
   {
-    title: "Task Management App",
+    title: "Ai Image Generator",
     image: project4,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["Angular", "Firebase"],
+      "Full stack app that helps generate an imaginative image through DALL-E AI and share it with the community",
+    technologies: ["React", "MongoDB", "Express", "Node.js"],
   },
 ];
 
