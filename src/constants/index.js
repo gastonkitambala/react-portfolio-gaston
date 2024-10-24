@@ -81,7 +81,7 @@ import project2 from "../assets/projects/tic-tac-toe.png";
 import project3 from "../assets/projects/bookstore.png";
 import project4 from "../assets/projects/project-4.png";
 
-export const HERO_CONTENT = `I am a dedicated software engineer with a talent for building robust and scalable applications. With over 2 years of practical experience, I have worked extensively on embedded software, desktop applications, and full-stack web development. My expertise spans front-end technologies like React.js and Vue.js, alongside back-end frameworks such as Node.js, FastAPI, and databases like MySQL, PostgreSQL, MSSQL, and MongoDB. I aim to leverage my skills to create innovative solutions that fuel business growth and deliver outstanding user experiences.`;
+export const HERO_CONTENT = `I am a dedicated software developer with a talent for building robust and scalable applications. With over 2 years of practical experience, I have worked extensively on embedded software, desktop applications, and full-stack web applications. My expertise spans front-end technologies like React.js and Vue.js, alongside back-end frameworks such as Node.js, FastAPI, and databases like MySQL, PostgreSQL, MSSQL, and MongoDB. I aim to leverage my skills to create innovative solutions that fuel business growth and deliver outstanding user experiences.`;
 
 /* export const HERO_CONTENT = `I am a passionate full stack developer with experience in crafting robust web applications and embedded systems. With a background in React.js, Node.js, C# .NET, and embedded systems, I enjoy developing full-stack solutions that enhance performance and user experience.`; */
 
