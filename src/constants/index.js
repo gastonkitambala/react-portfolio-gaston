@@ -81,11 +81,11 @@ import project2 from "../assets/projects/tic-tac-toe.png";
 import project3 from "../assets/projects/bookstore.png";
 import project4 from "../assets/projects/project-4.png";
 
-export const HERO_CONTENT = `I am a dedicated software developer with a talent for building robust and scalable applications. With over 2 years of practical experience, I have worked extensively on embedded software, desktop applications, and full-stack web applications. My expertise spans front-end technologies like React.js and Vue.js, alongside back-end frameworks such as Node.js, FastAPI, and databases like MySQL, PostgreSQL, MSSQL, and MongoDB. I aim to leverage my skills to create innovative solutions that fuel business growth and deliver outstanding user experiences.`;
+export const HERO_CONTENT = `Full-stack software engineer specializing in embedded C and web development. From bare-metal firmware to modern web apps, I bridge hardware and software using React, Node, and low-level C programming. Passionate about building performant solutions from microcontrollers to cloud services.`;
 
 /* export const HERO_CONTENT = `I am a passionate full stack developer with experience in crafting robust web applications and embedded systems. With a background in React.js, Node.js, C# .NET, and embedded systems, I enjoy developing full-stack solutions that enhance performance and user experience.`; */
 
-export const ABOUT_TEXT = `I am a versatile software developer with a strong foundation in both embedded systems and full-stack web development. With a B.Sc. in Computer Engineering, I have hands-on experience developing embedded software for STM32, ATMega(Arduino), and ESP32 MCUs, as well as building full-stack web applications using technologies like React.js, MSSQL, MongoDB, FastAPI, and Node.js. At E'Mind Tek, I specialize in full-stack web development for RFID-based applications, as well as embedded software development. My expertise includes C, React.js, Node.js, DevExtreme, and C#. I have a proven track record of leading web and desktop application development, along with embedded software solutions. Passionate about embedded systems, backend web development and AI, I also like pushing tech boundaries. I thrive in fast-paced, collaborative environments where I can continuously grow and deliver impactful results.`;
+export const ABOUT_TEXT = `Software engineer bridging hardware and web technologies. Armed with a Computer Engineering degree, I architect solutions from bare-metal firmware (STM32, ESP32) to modern web stacks. At E'Mind Tek, I develop RFID solutions combining embedded C with full-stack expertise in React, Node.js, FastAPI, and DevExtreme. Skilled in both SQL (MSSQL) and NoSQL (MongoDB) databases. Passionate about pushing boundaries in embedded systems, backend development, and AI.`;
 
 export const EXPERIENCES = [
   {
@@ -120,11 +120,12 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "Automatic Number Plate Recognition System",
-    image: project1,
+    title: "Bookstore",
+    image: project3,
     description:
-      "Designed and implemented a system for automatic number plate recognition with gate control. This project interfaces various sensors and actuators with Raspberry Pi for the purpose of managing access to premises.",
-    technologies: ["Python", "OpenCV", "Raspberry Pi", "Matplotlib"],
+      "Fully functional full-stack bookstore web application using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The app allows users to browse, search, add, remove books online, featuring intuitive interface for managing book inventory. Implemented RESTful APIs for seamless data interaction and ensured responsive design for optimal user experience across devices.",
+    technologies: ["HTML", "CSS", "React.js", "Node.js", "MongoDB", "Express"],
+    url: "mern-bookstore-frontend-three.vercel.app",
   },
   {
     title: "Tic-tac-toe Game",
@@ -132,20 +133,24 @@ export const PROJECTS = [
     description:
       "Built an interactive Tic-Tac-Toe game using React.js, showcasing dynamic state management and component-based architecture. The game includes features such as real-time player moves, win condition checks, and a reset functionality. Emphasized clean, modular code and a responsive design for smooth user experience on both desktop and mobile platforms.",
     technologies: ["React.js"],
+    url: "https://tic-tac-toe-vert-six.vercel.app/",
   },
-  {
-    title: "Bookstore",
-    image: project3,
-    description:
-      "Fully functional full-stack bookstore web application using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The app allows users to browse, search, add, remove books online, featuring intuitive interface for managing book inventory. Implemented RESTful APIs for seamless data interaction and ensured responsive design for optimal user experience across devices.",
-    technologies: ["HTML", "CSS", "React.js", "Node.js", "MongoDB", "Express"],
-  },
+
   {
     title: "Ai Image Generator",
     image: project4,
     description:
       "Full stack app that helps generate an imaginative image through DALL-E AI and share it with the community",
     technologies: ["React", "MongoDB", "Express", "Node.js"],
+    url: "https://inspira-pic.vercel.app/",
+  },
+  {
+    title: "Automatic Number Plate Recognition System",
+    image: project1,
+    description:
+      "Designed and implemented a system for automatic number plate recognition with gate control. This project interfaces various sensors and actuators with Raspberry Pi for the purpose of managing access to premises.",
+    technologies: ["Python", "OpenCV", "Raspberry Pi", "Matplotlib"],
+    url: "https://www.youtube.com/watch?v=MX92imRYH08",
   },
 ];
 
