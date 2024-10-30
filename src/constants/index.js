@@ -125,7 +125,7 @@ export const PROJECTS = [
     description:
       "Fully functional full-stack bookstore web application using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The app allows users to browse, search, add, remove books online, featuring intuitive interface for managing book inventory. Implemented RESTful APIs for seamless data interaction and ensured responsive design for optimal user experience across devices.",
     technologies: ["HTML", "CSS", "React.js", "Node.js", "MongoDB", "Express"],
-    url: "mern-bookstore-frontend-three.vercel.app",
+    url: "https://mern-bookstore-frontend-three.vercel.app/",
   },
   {
     title: "Tic-tac-toe Game",
