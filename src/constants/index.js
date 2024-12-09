@@ -1,119 +1,48 @@
-/* import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
-
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
-
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
-
-export const EXPERIENCES = [
-  {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
-  },
-  {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  },
-  {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
-  },
-];
-
-export const PROJECTS = [
-  {
-    title: "E-Commerce Website",
-    image: project1,
-    description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
-  },
-  {
-    title: "Task Management App",
-    image: project2,
-    description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
-  },
-  {
-    title: "Portfolio Website",
-    image: project3,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-  },
-  {
-    title: "Blogging Platform",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
-  },
-];
-
-export const CONTACT = {
-  address: "767 Fifth Avenue, New York, NY 10153 ",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
-};
- */
-
 import project1 from "../assets/projects/ANPR.jpg";
 import project2 from "../assets/projects/tic-tac-toe.png";
 import project3 from "../assets/projects/bookstore.png";
 import project4 from "../assets/projects/project-4.png";
 
-export const HERO_CONTENT = `Full-stack software engineer specializing in embedded C and web development. From bare-metal firmware to modern web apps, I bridge hardware and software using React, Node, and low-level C programming. Passionate about building performant solutions from microcontrollers to cloud services.`;
+export const HERO_CONTENT = `Full-stack software engineer specializing in embedded systems and web development. With expertise in React.js, Node.js, and low-level programming for microcontrollers, I bridge hardware and software to deliver innovative solutions. Passionate about creating performant applications from edge devices to cloud services.`;
 
-/* export const HERO_CONTENT = `I am a passionate full stack developer with experience in crafting robust web applications and embedded systems. With a background in React.js, Node.js, C# .NET, and embedded systems, I enjoy developing full-stack solutions that enhance performance and user experience.`; */
+/* export const HERO_CONTENT = `I am a passionate full-stack developer with experience in crafting robust web applications and embedded systems. With a background in React.js, Node.js, C# .NET, and embedded systems, I enjoy developing full-stack solutions that enhance performance and user experience.`; */
 
-export const ABOUT_TEXT = `Software engineer bridging hardware and web technologies. Armed with a Computer Engineering degree, I architect solutions from bare-metal firmware (STM32, ESP32) to modern web stacks. At E'Mind Tek, I develop RFID solutions combining embedded C with full-stack expertise in React, Node.js, FastAPI, and DevExtreme. Skilled in both SQL (MSSQL) and NoSQL (MongoDB) databases. Passionate about pushing boundaries in embedded systems, backend development, and AI.`;
+export const ABOUT_TEXT = `Software engineer combining expertise in embedded systems and web technologies. With a Computer Engineering background, I excel in developing solutions ranging from bare-metal firmware (STM32, ESP32) to modern web stacks. Currently at E'Mind Tek, I create innovative applications by leveraging my skills in React.js, Node.js, FastAPI, and DevExtreme. My experience spans SQL (MSSQL) and NoSQL (MongoDB) databases, emphasizing scalability, performance, and security.`;
 
 export const EXPERIENCES = [
   {
-    year: "2022 - Present",
+    year: "2024 - Present",
     role: "Software Developer",
     company: "E'Mind Tek",
-    description: `Developed Embedded Software, Desktop and Full-Stack applications using C, Node.js, C#, React.js, and DevExtreme. Built and maintained robust backend systems and desktop applications, improving performance and user interaction.`,
-    technologies: ["Node.js", "React.js", "C#", "MSSQL", "DevExtreme", "C"],
+    description: `Designed and developed full-stack web applications using Node.js, React.js, and DevExtreme. Maintained and optimized scalable backend systems and upgraded desktop applications with C#, enhancing usability and performance.`,
+    technologies: [
+      "Node.js",
+      "React.js",
+      "DevExtreme",
+      "C#",
+      "MSSQL",
+      "PowerShell",
+    ],
   },
   {
-    year: "Summer 2023, Winter  2024",
+    year: "2023 - 2024",
     role: "Full-stack Web Developer Intern",
     company: "E'Mind Tek",
-    description: `Two full-time internships as a Full-Stack web developer where I enhanced outdated PHP web apps, modernized project management architecture, and improved security with two-factor authentication for many projects.`,
+    description: `Modernized legacy PHP web applications, implemented multilingual interfaces for better accessibility, and introduced two-factor authentication for enhanced security.`,
     technologies: ["PHP", "Node.js", "C#", "DevExtreme"],
   },
-  /*   {
-    year: "2021 - 2023",
-    role: "Sales and Repair Technician",
-    company: "MobileKlinik",
-    description: `Provided customer support, troubleshooting, and smartphone repairs, ensuring quick and effective resolutions while managing inventory for timely service delivery.`,
-    technologies: ["Hardware", "Software Troubleshooting"],
-  }, */
   {
-    year: "January - March 2021",
+    year: "2022 - 2023",
+    role: "Embedded Software Developer (Part-time)",
+    company: "E'Mind Tek",
+    description: `Developed and optimized firmware for microcontrollers like STM32 and ESP32. Created robust data logging modules using SPI protocols and conducted rigorous testing with tools like STM32CubeIDE.`,
+    technologies: ["C", "Embedded Systems", "STM32", "ESP32"],
+  },
+  {
+    year: "2021",
     role: "Embedded Engineer Intern",
     company: "TME Africa",
-    description: `Developed firmware drivers in C/C++ and worked with AVR microcontroller-based systems, integrating communication protocols like UART, I2C, and SPI.`,
+    description: `Developed firmware drivers in C/C++ for AVR-based systems. Enhanced communication protocols, including UART, I2C, and SPI, to improve device communication efficiency.`,
     technologies: ["C/C++", "AVR", "Embedded Systems"],
   },
 ];
@@ -123,24 +52,23 @@ export const PROJECTS = [
     title: "Bookstore",
     image: project3,
     description:
-      "Fully functional full-stack bookstore web application using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The app allows users to browse, search, add, remove books online, featuring intuitive interface for managing book inventory. Implemented RESTful APIs for seamless data interaction and ensured responsive design for optimal user experience across devices.",
-    technologies: ["HTML", "CSS", "React.js", "Node.js", "MongoDB", "Express"],
+      "Full-stack bookstore application leveraging the MERN stack (MongoDB, Express.js, React.js, and Node.js). Features include browsing, searching, and managing books with responsive design and RESTful APIs for seamless functionality.",
+    technologies: ["React.js", "Node.js", "MongoDB", "Express"],
     url: "https://mern-bookstore-frontend-three.vercel.app/",
   },
   {
     title: "Tic-tac-toe Game",
     image: project2,
     description:
-      "Built an interactive Tic-Tac-Toe game using React.js, showcasing dynamic state management and component-based architecture. The game includes features such as real-time player moves, win condition checks, and a reset functionality. Emphasized clean, modular code and a responsive design for smooth user experience on both desktop and mobile platforms.",
+      "Interactive game built with React.js, focusing on real-time gameplay, modular architecture, and a user-friendly design for desktop and mobile users.",
     technologies: ["React.js"],
     url: "https://tic-tac-toe-vert-six.vercel.app/",
   },
-
   {
-    title: "Ai Image Generator",
+    title: "AI Image Generator",
     image: project4,
     description:
-      "Full stack app that helps generate an imaginative image through DALL-E AI and share it with the community",
+      "Developed a full-stack application that generates images using DALL-E AI, allowing users to create and share imaginative visuals within a community.",
     technologies: ["React", "MongoDB", "Express", "Node.js"],
     url: "https://inspira-pic.vercel.app/",
   },
@@ -148,7 +76,7 @@ export const PROJECTS = [
     title: "Automatic Number Plate Recognition System",
     image: project1,
     description:
-      "Designed and implemented a system for automatic number plate recognition with gate control. This project interfaces various sensors and actuators with Raspberry Pi for the purpose of managing access to premises.",
+      "Designed a system for automatic number plate recognition and gate control. Integrated Raspberry Pi with OpenCV and various sensors for efficient access management.",
     technologies: ["Python", "OpenCV", "Raspberry Pi", "Matplotlib"],
     url: "https://www.youtube.com/watch?v=MX92imRYH08",
   },
@@ -162,15 +90,15 @@ export const CONTACT = {
 
 export const EDUCATION = [
   {
+    year: "2021 - 2024",
+    title: "DEC Techniques de l'Informatique",
+    school: "Cégep de Thetford",
+    city: "Thetford Mines, QC, Canada",
+  },
+  {
     year: "2017 - 2021",
     title: "B.Sc. in Computer Engineering",
     school: "Kampala International University",
     city: "Kampala, Uganda",
-  },
-  {
-    year: "2021 - 2024",
-    title: "DEC Techniques de l'Informatique",
-    school: "Cégep de Thetford",
-    city: "Thetford Mines, QC. Canada",
   },
 ];
