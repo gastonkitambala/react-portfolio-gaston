@@ -7,14 +7,14 @@ export const HERO_CONTENT = `Full-stack software engineer specializing in embedd
 
 /* export const HERO_CONTENT = `I am a passionate full-stack developer with experience in crafting robust web applications and embedded systems. With a background in React.js, Node.js, C# .NET, and embedded systems, I enjoy developing full-stack solutions that enhance performance and user experience.`; */
 
-export const ABOUT_TEXT = `Software engineer combining expertise in embedded systems and web technologies. With a Computer Engineering background, I excel in developing solutions ranging from bare-metal firmware (STM32, ESP32) to modern web stacks. Currently at E'Mind Tek, I create innovative applications by leveraging my skills in React.js, Node.js, FastAPI, and DevExtreme. My experience spans SQL (MSSQL) and NoSQL (MongoDB) databases, emphasizing scalability, performance, and security.`;
+export const ABOUT_TEXT = `Software engineer bridging hardware and web technologies with extensive experience in diverse programming languages and tools. Holding a Computer Engineering degree and a DEC in Techniques de l'informatique, I excel in creating solutions from bare-metal firmware (STM32, ESP32) to modern web stacks. Proficient in front-end technologies like React.js, HTML5, CSS3, and DevExtreme; back-end tools including Node.js, Express.js, FastAPI(Python), Kotlin and database systems like MSSQL, PostgreSQL, MongoDB, and MySQL. Skilled in embedded systems development with C and C++, leveraging communication protocols such as UART, I2C, and SPI. Experienced in Docker, AWS, and deployment pipelines, I am committed to delivering scalable, secure, and performant solutions across domains.`;
 
 export const EXPERIENCES = [
   {
     year: "2024 - Present",
     role: "Software Developer",
     company: "E'Mind Tek",
-    description: `Designed and developed full-stack web applications using Node.js, React.js, and DevExtreme. Maintained and optimized scalable backend systems and upgraded desktop applications with C#, enhancing usability and performance.`,
+    description: `Design and develope full-stack web applications using Node.js, React.js, and DevExtreme. I Maintain and optimize scalable backend systems enhance desktop applications with C#, enhancing usability and performance.`,
     technologies: [
       "Node.js",
       "React.js",
