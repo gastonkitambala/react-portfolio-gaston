@@ -12,7 +12,7 @@ export const ABOUT_TEXT = `Software engineer bridging hardware and web technolog
 export const EXPERIENCES = [
   {
     year: "2024 - Present",
-    role: "Software Developer",
+    role: "Software Engineer",
     company: "E'Mind Tek",
     description: `Design and develope full-stack web applications using Node.js, React.js, and DevExtreme. I Maintain and optimize scalable backend systems enhance desktop applications with C#, enhancing usability and performance.`,
     technologies: [
@@ -83,7 +83,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "1141 Rue Saint-Louis, Gatineau, QC J8T 2R6",
+  address: "Gatineau, QC",
   phoneNo: "+1 418-933-0141",
   email: "gastonkitambala@gmail.com",
 };
