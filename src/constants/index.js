@@ -11,7 +11,7 @@ export const ABOUT_TEXT = `Software engineer bridging hardware and web technolog
 
 export const EXPERIENCES = [
   {
-    year: "2024 - Present",
+    year: "2024 - Present ",
     role: "Software Engineer",
     company: "E'Mind Tek",
     description: `Design and develope full-stack web applications using Node.js, React.js, and DevExtreme. I Maintain and optimize scalable backend systems enhance desktop applications with C#, enhancing usability and performance.`,
