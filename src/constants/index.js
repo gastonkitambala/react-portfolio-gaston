@@ -3,7 +3,7 @@ import project2 from "../assets/projects/tic-tac-toe.png";
 import project3 from "../assets/projects/bookstore.png";
 import project4 from "../assets/projects/project-4.png";
 
-export const HERO_CONTENT = `Full-stack software engineer specializing in embedded systems and web development. With expertise in React.js, Node.js, and low-level programming for microcontrollers, I bridge hardware and software to deliver innovative solutions. Passionate about creating performant applications from edge devices to cloud services.`;
+export const HERO_CONTENT = `Software engineer specializing in embedded systems and web development. With expertise in React.js, Node.js, and low-level programming for microcontrollers, I bridge hardware and software to deliver innovative solutions. Passionate about creating performant applications from edge devices to cloud services.`;
 
 /* export const HERO_CONTENT = `I am a passionate full-stack developer with experience in crafting robust web applications and embedded systems. With a background in React.js, Node.js, C# .NET, and embedded systems, I enjoy developing full-stack solutions that enhance performance and user experience.`; */
 

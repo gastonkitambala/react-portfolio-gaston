@@ -1,12 +1,10 @@
-
-
 import project1 from "../assets/projects/ANPR.jpg";
 import project2 from "../assets/projects/tic-tac-toe.png";
 import project3 from "../assets/projects/bookstore.png";
 import project4 from "../assets/projects/project-4.png";
 import { CgHello } from "react-icons/cg";
 
-export const HERO_CONTENT = `Full-stack software engineer specializing in embedded C and web development. From bare-metal firmware to modern web apps, I bridge hardware and software using React, Node, and low-level C programming. Passionate about building performant solutions from microcontrollers to cloud services.`;
+export const HERO_CONTENT = `Software engineer specializing in embedded C and web development. From bare-metal firmware to modern web apps, I bridge hardware and software using React, Node, and low-level C programming. Passionate about building performant solutions from microcontrollers to cloud services.`;
 
 /* export const HERO_CONTENT = `I am a passionate full stack developer with experience in crafting robust web applications and embedded systems. With a background in React.js, Node.js, C# .NET, and embedded systems, I enjoy developing full-stack solutions that enhance performance and user experience.`; */
 
@@ -16,7 +14,7 @@ export const EXPERIENCES = [
   {
     year: "2022 - Present",
     role: "Software Developer",
-    company: "E'Mind Tek", 
+    company: "E'Mind Tek",
     description: `Developed Embedded Software, Desktop and Full-Stack applications using C, Node.js, C#, React.js, and DevExtreme. Built and maintained robust backend systems and desktop applications, improving performance and user interaction.`,
     technologies: ["Node.js", "React.js", "C#", "MSSQL", "DevExtreme", "C"],
   },
