@@ -1,45 +1,33 @@
-import { EDUCATION } from "../constants";
 import { motion } from "framer-motion";
+import { LuGraduationCap } from "react-icons/lu";
+import { EDUCATION } from "../constants";
+import { reveal } from "../constants/motion";
+import Section from "./Section";
+
 const Education = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4">
-      <motion.h1
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="my-20 text-center text-4xl"
-      >
-        Education
-      </motion.h1>
-      <div>
-        {EDUCATION.map((education, index) => (
-          <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -100 }}
-              transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
-            >
-              <p className="mb-2 text-sm text-neutral-400">{education.year}</p>
-            </motion.div>
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 100 }}
-              transition={{ duration: 1 }}
-              className="w-full max-w-xl lg:w-3/4"
-            >
-              <h6 className="mb-2 font-semibold">
-                {education.title} -{" "}
-                <span className="text-sm text-purple-100">
-                  {education.school}
-                </span>
-              </h6>
-              <p className="mb-4 text-neutral-400">{education.city}</p>
-            </motion.div>
-          </div>
+    <Section id="education" index="05" eyebrow="Education" title="Education">
+      <div className="grid gap-4 md:grid-cols-2">
+        {EDUCATION.map((education) => (
+          <motion.div
+            key={education.title}
+            {...reveal}
+            className="flex gap-4 rounded-2xl border border-white/10 bg-white/[0.02] p-6"
+          >
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/5 text-lg text-neutral-300">
+              <LuGraduationCap aria-hidden="true" />
+            </span>
+            <div>
+              <p className="font-mono text-xs text-neutral-500">{education.year}</p>
+              <h3 className="mt-1 font-semibold text-neutral-50">{education.title}</h3>
+              <p className="mt-1 text-neutral-300">{education.school}</p>
+              <p className="mt-1 text-sm text-neutral-500">{education.city}</p>
+              <p className="mt-3 text-sm leading-relaxed text-neutral-400">{education.details}</p>
+            </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </Section>
   );
 };
 

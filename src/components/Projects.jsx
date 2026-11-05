@@ -1,59 +1,68 @@
-import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
+import { LuArrowUpRight } from "react-icons/lu";
+import { PROJECTS } from "../constants";
+import { reveal } from "../constants/motion";
+import Section from "./Section";
+import SystemDiagram from "./SystemDiagram";
 
 const Projects = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4">
-      <motion.h2
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="my-20 text-center text-4xl"
-      >
-        Projects
-      </motion.h2>
-      <div>
-        {PROJECTS.map((project, index) => (
-          <div key={index} className="mab-8 flex flex-wrap lg:justify-center">
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -100 }}
-              transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
-            >
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
+    <Section id="projects" index="03" eyebrow="Projects" title="Selected work">
+      <div className="space-y-8">
+        {PROJECTS.map((project) => (
+          <motion.article
+            key={project.title}
+            {...reveal}
+            className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] transition-colors duration-200 hover:border-white/20"
+          >
+            {/* Overview: the stretched link makes this whole block clickable */}
+            <div className="relative md:grid md:grid-cols-[1.3fr_1fr]">
+              <div className="aspect-video overflow-hidden border-b border-white/10 bg-neutral-900 md:aspect-auto md:h-full md:border-b-0 md:border-r">
                 <img
-                  className="mb-6  rounded"
                   src={project.image}
-                  width={150}
-                  height={150}
-                  alt={project.title}
+                  alt=""
+                  loading="lazy"
+                  className="h-full w-full object-cover object-top transition-transform duration-300 ease-out group-hover:scale-[1.03]"
                 />
-              </a>
-            </motion.div>
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 100 }}
-              transition={{ duration: 1 }}
-              className="w-full max-w-xl lg:w-3/4"
-            >
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <h6 className="mb-2 font-semibold">{project.title}</h6>
-              </a>
-              <p className="mb-4 text-neutral-400">{project.description}</p>
-              {project.technologies.map((tech, index) => (
-                <span
-                  key={index}
-                  className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900"
-                >
-                  {tech}
-                </span>
-              ))}
-            </motion.div>
-          </div>
+              </div>
+              <div className="flex flex-col p-6">
+                <h3 className="text-lg font-semibold text-neutral-50">
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="after:absolute after:inset-0 after:content-['']"
+                  >
+                    {project.title}
+                  </a>
+                </h3>
+                <p className="mt-2 flex-1 leading-relaxed text-neutral-400">
+                  {project.description}
+                </p>
+                <ul className="mt-5 flex flex-wrap gap-2" aria-label="Technologies">
+                  {project.technologies.map((tech) => (
+                    <li key={tech} className="tag">
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-accent">
+                  {project.linkLabel}
+                  <LuArrowUpRight
+                    aria-hidden="true"
+                    className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  />
+                </p>
+              </div>
+            </div>
+
+            <div className="border-t border-white/10 bg-white/[0.015] p-6">
+              <SystemDiagram title={project.title} architecture={project.architecture} />
+            </div>
+          </motion.article>
         ))}
       </div>
-    </div>
+    </Section>
   );
 };
 
