@@ -1,11 +1,13 @@
 import { Fragment } from "react";
 import {
   LuBox,
-  LuCpu,
+  LuCalendar,
   LuDatabase,
   LuFileSpreadsheet,
+  LuGlobe,
   LuImage,
   LuLock,
+  LuMail,
   LuMonitor,
   LuServer,
   LuWorkflow,
@@ -20,7 +22,9 @@ const ICONS = {
   logic: LuWorkflow,
   lock: LuLock,
   file: LuFileSpreadsheet,
-  chip: LuCpu,
+  mail: LuMail,
+  calendar: LuCalendar,
+  external: LuGlobe,
 };
 
 // Pad + trace + pad, drawn like a PCB track. The accent lives only here, so

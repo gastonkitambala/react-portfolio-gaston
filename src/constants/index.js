@@ -1,4 +1,5 @@
 import inspirapicImg from "../assets/projects/inspirapic.webp";
+import zionwareImg from "../assets/projects/zionware.webp";
 
 export const NAME = "Itaka Gaston Kitambala";
 export const ROLE = "Software Engineer";
@@ -52,6 +53,18 @@ export const SKILLS = [
     items: ["AWS (EC2, S3)", "Microsoft Azure", "Docker", "Kubernetes", "CI/CD", "Git & GitHub", "Linux"],
   },
   {
+    title: "Practices",
+    icon: "practices",
+    items: [
+      "Unit & integration testing",
+      "Code reviews",
+      "Logging & production debugging",
+      "AI-assisted development (Claude)",
+      "Agile / Scrum",
+      "Remote collaboration",
+    ],
+  },
+  {
     title: "Embedded Systems",
     icon: "embedded",
     items: [
@@ -63,18 +76,6 @@ export const SKILLS = [
       "UART · I2C · SPI",
       "Firmware drivers",
       "Hardware integration testing",
-    ],
-  },
-  {
-    title: "Practices",
-    icon: "practices",
-    items: [
-      "Unit & integration testing",
-      "Code reviews",
-      "Logging & production debugging",
-      "AI-assisted development (Claude)",
-      "Agile / Scrum",
-      "Remote collaboration",
     ],
   },
 ];
@@ -122,6 +123,49 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
+    title: "Zionware",
+    image: zionwareImg,
+    description:
+      "Bilingual (English / French) website and lead funnel for Zionware, a software services company in Ottawa-Gatineau. Visitors browse services and past work, then book a call or send a project request that lands in the inbox.",
+    highlights: [
+      "Locale-based routing with next-intl, a script that checks EN/FR content parity, light and dark themes, and FAQ structured data (JSON-LD) for search.",
+      "Contact form as a Next.js server action: honeypot, allowlisted fields, HTML escaping and Redis-backed rate limiting before sending through Resend.",
+      "Cal.com booking modal and a GDPR consent step, specified and planned in design docs before implementation.",
+    ],
+    technologies: ["Next.js 16", "TypeScript", "React 19", "next-intl", "Tailwind CSS", "Upstash Redis", "Resend"],
+    url: "https://zionware-web.vercel.app/",
+    linkLabel: "Live site",
+    repo: "https://github.com/gastonkitambala/zionwareWeb",
+    architecture: {
+      summary:
+        "Pages are rendered per locale by the Next.js App Router. The contact form posts to a server action that validates input and checks a rate limit in Upstash Redis before emailing the request through Resend; bookings go straight to an embedded Cal.com scheduler.",
+      tiers: [
+        {
+          label: "Client",
+          nodes: [
+            { name: "Next.js pages", detail: "/en and /fr routes", icon: "client" },
+            { name: "Book-a-call modal", detail: "Cal.com embed", icon: "calendar" },
+          ],
+        },
+        {
+          label: "Server",
+          nodes: [
+            { name: "Server action", detail: "Validate, sanitize, send", icon: "server" },
+            { name: "Rate limiter", detail: "5 requests / 10 min per IP", icon: "lock" },
+          ],
+        },
+        {
+          label: "Services",
+          nodes: [
+            { name: "Upstash Redis", detail: "Rate-limit counters", icon: "database" },
+            { name: "Resend", detail: "Transactional email", icon: "mail" },
+          ],
+        },
+      ],
+      links: ["form POST", "HTTPS APIs"],
+    },
+  },
+  {
     title: "SeatFinder",
     description:
       "Event seating app built for a wedding: guests scan a QR code at the venue, type their name and see their table in seconds. Organizers sign in to a private dashboard to import the guest list from CSV or Excel, review a row-by-row preview of skipped entries, then publish.",
@@ -163,6 +207,47 @@ export const PROJECTS = [
     },
   },
   {
+    title: "LeadGen",
+    description:
+      "Prospecting tool for a web agency: search a city and an industry, and it finds local businesses on Google Maps, audits each one's website and ranks the best sales leads. Each lead comes with a tailored outreach pitch and the list exports to CSV.",
+    highlights: [
+      "Next.js API route that combines the Google Places and PageSpeed Insights APIs, with timeouts and a liveness check for broken sites.",
+      "Scores every site (no website, broken, outdated, poor mobile, needs work) from weighted mobile and desktop performance plus HTTPS.",
+      "Demo mode with typed mock data so the app runs without API keys.",
+    ],
+    technologies: ["Next.js 14", "TypeScript", "React", "Google Places API", "PageSpeed API", "Tailwind CSS"],
+    url: "https://github.com/gastonkitambala/LeadGen",
+    linkLabel: "Source code",
+    architecture: {
+      summary:
+        "The search UI calls a Next.js API route. The route queries Google Places for matching businesses, fetches each one's details, checks whether its website responds and runs PageSpeed Insights on it, then returns scored leads that the client ranks, pitches and exports.",
+      tiers: [
+        {
+          label: "Client",
+          nodes: [
+            { name: "Search & results", detail: "Filters, stats, pitch modal", icon: "client" },
+            { name: "CSV export", detail: "Runs in the browser", icon: "file" },
+          ],
+        },
+        {
+          label: "Server",
+          nodes: [
+            { name: "/api/search", detail: "Next.js route handler", icon: "server" },
+            { name: "Website scorer", detail: "Status + composite score", icon: "logic" },
+          ],
+        },
+        {
+          label: "External APIs",
+          nodes: [
+            { name: "Google Places", detail: "Search & place details", icon: "external" },
+            { name: "PageSpeed Insights", detail: "Mobile & desktop scores", icon: "external" },
+          ],
+        },
+      ],
+      links: ["fetch · JSON", "HTTPS APIs"],
+    },
+  },
+  {
     title: "InspiraPic",
     image: inspirapicImg,
     description:
@@ -192,40 +277,6 @@ export const PROJECTS = [
         },
       ],
       links: ["REST · JSON", "DB queries · HTTPS"],
-    },
-  },
-  {
-    title: "STM32F4 bare-metal drivers",
-    description:
-      "Peripheral drivers for the STM32F4 microcontroller written in C directly against the register map, with no vendor HAL. Built up step by step from GPIO to interrupt- and DMA-driven UART, ADC and timers.",
-    highlights: [
-      "GPIO, UART (polling, interrupt and DMA), ADC single and continuous conversion, SysTick, timers with output compare and input capture, and external interrupts.",
-      "Each driver configures clocks and peripheral registers by hand, which is the same low-level reasoning I use to debug production web systems.",
-    ],
-    technologies: ["C", "STM32F4", "ARM Cortex-M4", "UART", "DMA", "Interrupts"],
-    url: "https://github.com/gastonkitambala/STM32F4_Baremetal_Drivers",
-    linkLabel: "Source code",
-    architecture: {
-      summary:
-        "Application code calls small driver modules (GPIO, UART, ADC, timers) that set peripheral registers through the CMSIS device headers. Interrupt handlers and the DMA controller move data without blocking the main loop.",
-      tiers: [
-        {
-          label: "Application",
-          nodes: [{ name: "main loop", detail: "Uses driver APIs", icon: "logic" }],
-        },
-        {
-          label: "Drivers",
-          nodes: [
-            { name: "GPIO · UART · ADC", detail: "Register-level C", icon: "state" },
-            { name: "Timers · SysTick · EXTI", detail: "IRQ handlers, DMA", icon: "state" },
-          ],
-        },
-        {
-          label: "Hardware",
-          nodes: [{ name: "STM32F4 MCU", detail: "CMSIS registers", icon: "chip" }],
-        },
-      ],
-      links: ["function calls", "memory-mapped I/O"],
     },
   },
 ];
