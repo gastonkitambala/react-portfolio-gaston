@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      // One curve and one short duration for every hover, press and toggle
+      transitionTimingFunction: { DEFAULT: "cubic-bezier(0.22, 1, 0.36, 1)" },
+      transitionDuration: { DEFAULT: "150ms" },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "ui-monospace", "monospace"],

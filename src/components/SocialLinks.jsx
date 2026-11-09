@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SOCIALS } from "../constants";
 
@@ -6,7 +6,6 @@ const ICONS = {
   LinkedIn: FaLinkedin,
   GitHub: FaGithub,
   "X (Twitter)": FaXTwitter,
-  Instagram: FaInstagram,
 };
 
 const SocialLinks = ({ className = "" }) => {

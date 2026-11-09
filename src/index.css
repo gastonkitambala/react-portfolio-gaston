@@ -31,7 +31,7 @@
   }
 
   .btn {
-    @apply inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-lg px-5 text-sm font-medium transition-colors duration-200;
+    @apply inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-lg px-5 text-sm font-medium transition-colors duration-150;
   }
 
   .btn-primary {
@@ -43,6 +43,6 @@
   }
 
   .icon-link {
-    @apply inline-flex h-11 w-11 items-center justify-center rounded-lg text-xl text-neutral-400 transition-colors duration-200 hover:bg-white/5 hover:text-neutral-100;
+    @apply inline-flex h-11 w-11 items-center justify-center rounded-lg text-xl text-neutral-400 transition-colors duration-150 hover:bg-white/5 hover:text-neutral-100;
   }
 }

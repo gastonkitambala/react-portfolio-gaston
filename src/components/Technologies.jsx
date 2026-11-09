@@ -26,10 +26,10 @@ const Technologies = () => {
               className="rounded-2xl border border-white/10 bg-white/[0.02] p-6"
             >
               <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent-soft text-accent">
+                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 text-neutral-400">
                   <Icon aria-hidden="true" />
                 </span>
-                <h3 className="font-semibold text-neutral-50">{title}</h3>
+                <h3 className="font-medium text-neutral-50">{title}</h3>
               </div>
               <ul className="mt-5 flex flex-wrap gap-2">
                 {items.map((item) => (

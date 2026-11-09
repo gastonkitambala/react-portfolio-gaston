@@ -18,10 +18,6 @@ const App = () => {
         >
           Skip to content
         </a>
-        <div
-          aria-hidden="true"
-          className="pointer-events-none fixed inset-0 -z-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(52,211,153,0.10),transparent)]"
-        />
         <Navbar />
         <main id="main" className="relative mx-auto max-w-6xl px-5 sm:px-8">
           <Hero />

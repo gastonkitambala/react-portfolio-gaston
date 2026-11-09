@@ -1,15 +1,13 @@
-import project2 from "../assets/projects/tic-tac-toe.webp";
-import project3 from "../assets/projects/bookstore.webp";
-import project4 from "../assets/projects/inspirapic.webp";
+import inspirapicImg from "../assets/projects/inspirapic.webp";
 
 export const NAME = "Itaka Gaston Kitambala";
-export const ROLE = "Full Stack Software Engineer";
+export const ROLE = "Software Engineer";
 export const RESUME_URL = "/Itaka_Gaston_Kitambala_Resume.pdf";
 
-export const HERO_CONTENT = `Full stack software engineer with 4+ years of experience shipping and maintaining production web applications with React, TypeScript, Node.js and REST APIs — backed by a strong foundation in C/C++ and embedded systems.`;
+export const HERO_CONTENT = `Full stack web developer with 4+ years of professional experience, building and shipping production web applications end to end with React, TypeScript, Node.js, FastAPI, .NET Core and REST APIs. I also bring a background in embedded software, writing C/C++ firmware.`;
 
 export const ABOUT_TEXT = [
-  `I'm a full stack software engineer with 4+ years of experience shipping and maintaining production web applications with React, TypeScript, Node.js and REST APIs. I'm comfortable contributing across frontend and backend codebases, and I enjoy owning a feature end to end.`,
+  `I'm a full stack software engineer with 4+ years of professional experience, shipping and maintaining production web applications with React, TypeScript, Node.js and REST APIs, plus Python (FastAPI) and C# (.NET Core) backends. I'm comfortable contributing across frontend and backend codebases, and I enjoy owning a feature end to end.`,
   `I iterate on features with product and business teams, debug production issues through logs and monitoring, and keep quality high with testing and code review. I use AI-assisted development tools such as Claude daily for coding, debugging and planning.`,
   `I started my career in embedded systems, writing C/C++ firmware for STM32, ESP32 and AVR microcontrollers, and joined E'Mind Tek as an embedded software developer before transitioning to full stack development. That low-level foundation, along with a B.Sc. in Computer Engineering and a DEC in Computer Science Technology, still shapes how I debug and break down complex problems. I'm a strong communicator on remote teams and bilingual in English and French.`,
 ];
@@ -17,7 +15,7 @@ export const ABOUT_TEXT = [
 export const QUICK_FACTS = [
   { label: "Based in", value: "Gatineau, QC" },
   { label: "Experience", value: "4+ years" },
-  { label: "Focus", value: "Full stack · C/C++" },
+  { label: "Focus", value: "Full stack web" },
   { label: "Languages", value: "English / French" },
 ];
 
@@ -35,7 +33,8 @@ export const SKILLS = [
       "Node.js",
       "Express.js",
       "Next.js",
-      ".NET",
+      "FastAPI",
+      ".NET Core",
       "Spring Boot",
       "Django",
       "REST APIs",
@@ -123,13 +122,55 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
+    title: "SeatFinder",
+    description:
+      "Event seating app built for a wedding: guests scan a QR code at the venue, type their name and see their table in seconds. Organizers sign in to a private dashboard to import the guest list from CSV or Excel, review a row-by-row preview of skipped entries, then publish.",
+    highlights: [
+      "Accent- and case-insensitive name search tuned for phones on venue wifi, with no animation library on the guest page.",
+      "Forgiving spreadsheet import: headings matched loosely in English and French, bad rows reported instead of failing the whole file.",
+      "Admin API protected by signed session cookies and Next.js middleware; parsing and search covered by Vitest unit tests.",
+    ],
+    technologies: ["Next.js 15", "TypeScript", "React 19", "SQLite", "Tailwind CSS", "Vitest"],
+    url: "https://github.com/gastonkitambala/seatFinder",
+    linkLabel: "Source code",
+    architecture: {
+      summary:
+        "Guests hit a public search page that queries guests through a Next.js route handler. Organizers log in through middleware-guarded admin routes that parse uploaded CSV or .xlsx files, validate each row, and write the guest list to SQLite in one confirmed import.",
+      tiers: [
+        {
+          label: "Client",
+          nodes: [
+            { name: "Guest page", detail: "QR → name search → table", icon: "client" },
+            { name: "Admin dashboard", detail: "Import, edit, customize", icon: "client" },
+          ],
+        },
+        {
+          label: "Server",
+          nodes: [
+            { name: "Next.js route handlers", detail: "Search, import, settings", icon: "server" },
+            { name: "Middleware auth", detail: "Signed session cookie", icon: "lock" },
+          ],
+        },
+        {
+          label: "Data",
+          nodes: [
+            { name: "SQLite", detail: "better-sqlite3", icon: "database" },
+            { name: "Import parser", detail: "CSV & .xlsx (exceljs)", icon: "file" },
+          ],
+        },
+      ],
+      links: ["fetch · JSON", "SQL · file parsing"],
+    },
+  },
+  {
     title: "InspiraPic",
-    image: project4,
+    image: inspirapicImg,
     description:
       "AI image generator with a React front end and a Node.js/Express REST API over MongoDB, integrating a third-party image generation API. Users create images and share them with the community.",
     technologies: ["React", "Node.js", "Express", "MongoDB", "REST API"],
     url: "https://inspira-pic.vercel.app/",
     linkLabel: "Live demo",
+    repo: "https://github.com/gastonkitambala/InspiraPic-",
     architecture: {
       summary:
         "The React client sends a prompt to the Express API, which calls the third-party image generation API and returns the result. Sharing an image saves the post to MongoDB so it appears in the community feed.",
@@ -154,59 +195,37 @@ export const PROJECTS = [
     },
   },
   {
-    title: "Bookstore",
-    image: project3,
+    title: "STM32F4 bare-metal drivers",
     description:
-      "Full-stack CRUD application with REST endpoints, search and a responsive React UI for browsing and managing books.",
-    technologies: ["React.js", "Node.js", "Express", "MongoDB"],
-    url: "https://mern-bookstore-frontend-three.vercel.app/",
-    linkLabel: "Live demo",
+      "Peripheral drivers for the STM32F4 microcontroller written in C directly against the register map, with no vendor HAL. Built up step by step from GPIO to interrupt- and DMA-driven UART, ADC and timers.",
+    highlights: [
+      "GPIO, UART (polling, interrupt and DMA), ADC single and continuous conversion, SysTick, timers with output compare and input capture, and external interrupts.",
+      "Each driver configures clocks and peripheral registers by hand, which is the same low-level reasoning I use to debug production web systems.",
+    ],
+    technologies: ["C", "STM32F4", "ARM Cortex-M4", "UART", "DMA", "Interrupts"],
+    url: "https://github.com/gastonkitambala/STM32F4_Baremetal_Drivers",
+    linkLabel: "Source code",
     architecture: {
       summary:
-        "The React UI calls REST endpoints to create, read, update, delete and search books. The Express API translates each request into a MongoDB query and returns JSON to the client.",
+        "Application code calls small driver modules (GPIO, UART, ADC, timers) that set peripheral registers through the CMSIS device headers. Interrupt handlers and the DMA controller move data without blocking the main loop.",
       tiers: [
         {
-          label: "Client",
-          nodes: [{ name: "React SPA", detail: "Browse, search & manage books", icon: "client" }],
+          label: "Application",
+          nodes: [{ name: "main loop", detail: "Uses driver APIs", icon: "logic" }],
         },
         {
-          label: "Server",
-          nodes: [{ name: "Node.js + Express", detail: "CRUD + search endpoints", icon: "server" }],
+          label: "Drivers",
+          nodes: [
+            { name: "GPIO · UART · ADC", detail: "Register-level C", icon: "state" },
+            { name: "Timers · SysTick · EXTI", detail: "IRQ handlers, DMA", icon: "state" },
+          ],
         },
         {
-          label: "Data",
-          nodes: [{ name: "MongoDB", detail: "Books collection", icon: "database" }],
+          label: "Hardware",
+          nodes: [{ name: "STM32F4 MCU", detail: "CMSIS registers", icon: "chip" }],
         },
       ],
-      links: ["REST · JSON", "DB queries"],
-    },
-  },
-  {
-    title: "Modern Tic-Tac-Toe",
-    image: project2,
-    description:
-      "Interactive game built with React.js, focusing on real-time gameplay, a modular component architecture and a clean design for desktop and mobile.",
-    technologies: ["React.js"],
-    url: "https://tic-tac-toe-vert-six.vercel.app/",
-    linkLabel: "Live demo",
-    architecture: {
-      summary:
-        "Runs entirely in the browser with no backend. A click on a square updates the game state held in React hooks; pure rule functions check for a win or draw after every move, and the board re-renders.",
-      tiers: [
-        {
-          label: "UI",
-          nodes: [{ name: "Board & Square", detail: "Render the grid, emit clicks", icon: "client" }],
-        },
-        {
-          label: "State",
-          nodes: [{ name: "Game state", detail: "React hooks: board, turn", icon: "state" }],
-        },
-        {
-          label: "Logic",
-          nodes: [{ name: "Game rules", detail: "Win & draw detection", icon: "logic" }],
-        },
-      ],
-      links: ["props · events", "function calls"],
+      links: ["function calls", "memory-mapped I/O"],
     },
   },
 ];
@@ -241,7 +260,6 @@ export const SOCIALS = [
   },
   { label: "GitHub", url: "https://github.com/gastonkitambala" },
   { label: "X (Twitter)", url: "https://x.com/g_kitambala" },
-  { label: "Instagram", url: "https://www.instagram.com/iam_theceo/" },
 ];
 
 export const NAV_LINKS = [

@@ -1,8 +1,32 @@
-# React + Vite
+# Itaka Gaston Kitambala — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal site of a software engineer based in Gatineau, QC: full stack web development (React, TypeScript, Node.js, FastAPI, .NET Core) with a C/C++ embedded background.
 
-Currently, two official plugins are available:
+**Live:** https://portfolio-gaston-theta.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
+
+- React 18 + Vite
+- Tailwind CSS with a small set of design tokens (`tailwind.config.js`, `src/index.css`)
+- Framer Motion for entrance animations, honouring `prefers-reduced-motion`
+
+## Structure
+
+```
+src/
+  constants/index.js   all site content: bio, experience, projects, skills, links
+  components/          one component per section (Hero, About, Experience, Projects, ...)
+  components/SystemDiagram.jsx  renders each project's architecture from data
+public/                résumé PDF, favicon, social preview image
+```
+
+Content changes only touch `src/constants/index.js`.
+
+## Run locally
+
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # production build in dist/
+npm run lint
+```

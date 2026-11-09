@@ -28,7 +28,7 @@ const About = () => {
           <dl className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10">
             {QUICK_FACTS.map(({ label, value }) => (
               <div key={label} className="bg-neutral-950 p-5">
-                <dt className="font-mono text-xs uppercase tracking-wider text-neutral-500">
+                <dt className="font-mono text-xs text-neutral-500">
                   {label}
                 </dt>
                 <dd className="mt-1 font-medium text-neutral-100">{value}</dd>

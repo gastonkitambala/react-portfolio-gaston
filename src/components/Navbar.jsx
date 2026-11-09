@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-40 transition-colors duration-200 ${
+      className={`fixed inset-x-0 top-0 z-40 transition-colors duration-150 ${
         scrolled || open
           ? "border-b border-white/5 bg-neutral-950/80 backdrop-blur-md"
           : "border-b border-transparent"
@@ -42,7 +42,7 @@ const Navbar = () => {
             <li key={href}>
               <a
                 href={href}
-                className="inline-flex min-h-11 items-center rounded-md px-3 text-sm text-neutral-400 transition-colors duration-200 hover:text-neutral-50"
+                className="inline-flex min-h-11 items-center rounded-md px-3 text-sm text-neutral-400 transition-colors duration-150 hover:text-neutral-50"
               >
                 {label}
               </a>
